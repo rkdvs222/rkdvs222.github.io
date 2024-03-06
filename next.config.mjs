@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const env = process.env.NODE_ENV;
 const nextConfig = async () => {
   const customConfig = {
     basePath: "",
@@ -10,7 +11,7 @@ const nextConfig = async () => {
     experimental: {
       appDir: true,
     },
-    output: "export",
+    output: env == "development" ? "standalone" : "export",
     images: {
       unoptimized: true,
     },
