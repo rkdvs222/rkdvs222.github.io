@@ -9,6 +9,7 @@ const nextConfig = async () => {
     experimental: {
       appDir: true,
     },
+    output: "export",
   };
 
   return customConfig;
