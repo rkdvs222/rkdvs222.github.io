@@ -7,7 +7,7 @@ const nextConfig = async () => {
       dirs: ["src/component/", "src/libs/", "src/pages/", "src/app/"],
     },
     reactStrictMode: true,
-    distDir: "out",
+    // distDir: "out",
     experimental: {
       appDir: true,
     },
