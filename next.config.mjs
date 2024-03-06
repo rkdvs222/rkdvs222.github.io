@@ -3,7 +3,7 @@ const nextConfig = async () => {
   const customConfig = {
     basePath: "",
     eslint: {
-      dirs: ["src/component/", "src/lib/", "src/pages/"],
+      dirs: ["src/component/", "src/libs/", "src/pages/", "src/app/"],
     },
     reactStrictMode: true,
     distDir: "build",
