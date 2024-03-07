@@ -1,7 +1,10 @@
 import path from "path";
+import { fileURLToPath } from "url";
 
 /** @type {import('next').NextConfig} */
-const env = process.env.NODE_ENV;
+const env = process.env;
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 const nextConfig = async () => {
   const customConfig = {
     basePath: "",
@@ -13,7 +16,8 @@ const nextConfig = async () => {
     experimental: {
       appDir: true,
     },
-    output: env == "development" ? "standalone" : "export",
+    output:
+      env.NEXT_PUBLIC_DEPLOY_DESTINATION === "local" ? "standalone" : "export",
     images: {
       unoptimized: true,
     },
