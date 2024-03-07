@@ -1,0 +1,5 @@
+.next
+.eslintrc.json
+/out
+tsconfig.json
+next.config.msj
