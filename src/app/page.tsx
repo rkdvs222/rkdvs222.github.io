@@ -1,8 +1,8 @@
-import styles from "./page.module.css";
+import "@/styles/globals.scss";
 
 export default function Home() {
   return (
-    <div className={styles.main}>
+    <div className="blogTop">
       <h1>hello world!</h1>
     </div>
   );
